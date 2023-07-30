@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.10), rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(./img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: 'Athiti', sans-serif;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+::selection{
+    color: black;
+    background-color: #dcdcdc;
+}
+
+.aside::before{
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: #423c358a ;
+    content: "";                  
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    clear: both;
+}
+
+.profile{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.me{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(./img/isa.png);
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15rem;
+    box-shadow: rgba(141, 141, 141, 0.56) 0px 5px 50px 4px;
+}
+
+hr{
+    width: 100%;
+    height: fit-content;
+    color: white;
+}
+
+.profile ul{
+    width: 300px;
+    list-style: none;
+    justify-content: space-around;
+}
+
+section{
+    float: right;
+    width: 80%;
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.3), rgba(0,0,0,0.4));
+    width: fit-content;
+    height: fit-content;
+    padding: 5rem;
+    border-radius: 2rem;
+}
+
+.about-me{
+    width: 900px;
+    letter-spacing: 2px;
+}
+
+article ul{
+    list-style: none;
+}
+
+/*--------------------------- MEDIA PART ---------------------------*/
+
+@media only screen and (max-width:912px) {
+    
+    .aside::before{
+        float: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .profile{
+        float: none;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .animasyon-2{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
+
+    section{
+        float: none;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    article{
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+        position: relative;
+        top: 1.5rem;
+    }
+
+    .about-me{
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-me ul{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .about-me ul li{
+        margin-top: 15px;
+    }
+
+}
